@@ -16,7 +16,4 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
 shouldShowWarning(): boolean {
     return this.type === 'Space Debris'
 }
-// testFunction():boolean{
-//     return true;
-// }
 }
