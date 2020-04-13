@@ -14,6 +14,8 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
 }
 
 shouldShowWarning(): boolean {
-    return this.type === 'Space Debris'
+    let shuttleType = this.type;
+    let lowercaseShuttleType = shuttleType.toLowerCase();
+    return (lowercaseShuttleType === 'space debris')
 }
 }
