@@ -52,4 +52,22 @@ export class AppComponent {
   // this will cause Angular to re-make the table, but now only containing matches
   this.displayList = matchingSatellites;
 }
+numberOfTypeTwo(typeOfSatellite: string): number {
+  // let matchingSatellites: Satellite[] = [];
+  let matchingSatellites = [];
+  typeOfSatellite = typeOfSatellite.toLowerCase();
+  for(let i=0; i < this.sourceList.length; i++) {
+     let name = this.sourceList[i].type.toLowerCase();
+     if (name.indexOf(typeOfSatellite) >= 0) {
+        matchingSatellites.push(this.sourceList[i]);
+     }
+  }
+  // assign this.displayList to be the the array of matching satellites
+  // this will cause Angular to re-make the table, but now only containing matches
+  // this.displayList = matchingSatellites;
+  let barbisArray = ['1','2']
+  // return matchingSatellites.length;
+  return barbisArray.length;
+  // return this.sourceList.length;
+}
 }
